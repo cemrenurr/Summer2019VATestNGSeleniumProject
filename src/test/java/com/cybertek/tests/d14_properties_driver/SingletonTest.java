@@ -15,13 +15,13 @@ public class SingletonTest {
         System.out.println("s2= " + s2);
 
     }
-//
-//    @Test
-//    public void test2(){
-//        WebDriver driver= Driver.get();
-//        String url= ConfigurationReader.get("url");
-//        driver.get(url);
-//        Driver.closeDriver();
-//
-//    }
+
+    @Test
+    public void test2(){
+        WebDriver driver= Driver.get();
+        String url= ConfigurationReader.get("url");
+        driver.get(url);
+        Driver.closeDriver();
+
+    }
 }
