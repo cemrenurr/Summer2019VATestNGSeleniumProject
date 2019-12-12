@@ -12,7 +12,7 @@ public class xpath {
         driver.findElement(By.xpath("//input[@name='email']")).sendKeys("cemre_topuz@yahoo.com");
         driver.findElement(By.xpath("//input[@name='pass']")).sendKeys("Marmara2212");
         driver.findElement(By.xpath("//button[@name='login']")).click();
-
+        System.out.println("develop branch1");
 
     }
 }

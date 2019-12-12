@@ -20,7 +20,7 @@ public class LoginPage {
     public WebElement submit;
 
     public void login (String usernamestr, String passwordStr) {
-        username.sendKeys((usernamestr));
+        username.sendKeys(usernamestr);
         password.sendKeys(passwordStr);
         submit.click();
     }

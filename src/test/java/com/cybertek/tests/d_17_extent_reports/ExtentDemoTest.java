@@ -30,7 +30,7 @@ import org.testng.annotations.Test;
         ExtentTest extentLogger;
 
         @BeforeMethod
-        public void setUp(){
+        public void setUp() {
             // initialize the classes
             report = new ExtentReports();
 
@@ -54,27 +54,29 @@ import org.testng.annotations.Test;
             report.setSystemInfo("whats my name", "John B Goodenough");
 
         }
+
         @Test
-        public void test1(){
+        public void test1() {
             // give name to the current test
             extentLogger = report.createTest("TC001 Login as driver test");
-            // test steps
+            // info() --> write test steps
             extentLogger.info("Open chrome");
             extentLogger.info("go to url");
             extentLogger.info("enter driver login info");
             extentLogger.info("click submit");
             extentLogger.info("click verify logged in");
+            // pass() --> marks the test case as passed
             extentLogger.pass("TC001 passed");
+
         }
 
         @AfterMethod
-        public void close(){
-            // this is when the report is actually created
+        public void close() {
+            // this is when the report is actually created.
+            // this line must run after everything.
             report.flush();
         }
-
     }
-
 
 
 //    ExtentReports report;                   // used for starting and building reports
